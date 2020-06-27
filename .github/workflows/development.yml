@@ -41,7 +41,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v1
         with:
-          name: profile-artifact
+          name: expense-artifact
       - name: Get the version
         id: get_version
         run: echo ::set-output name=BRANCH::$(echo $GITHUB_REF | cut -d / -f 3)
