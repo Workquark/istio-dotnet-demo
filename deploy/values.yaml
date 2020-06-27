@@ -36,6 +36,20 @@ service:
   type: ClusterIP
   port: 80
 
+ingressGateway:
+  enabled: true
+  name: services/company-gateway
+  rewrite: 
+    uri: "/"
+  hosts: 
+    - "*"
+    # - "*.elb.eu-west-1.amazonaws.com"
+  matchPrefix: 
+    - "/expense/"
+    - "/bar"
+
+
+
 ingress:
   enabled: true
   annotations: {
