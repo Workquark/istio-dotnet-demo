@@ -52,5 +52,6 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           dockerfile: ./expense-artifact/Dockerfile
           repository: joydeep1985/expense
-          tags: ${{ steps.get_version.outputs.BRANCH  }}-${{ github.sha }}
+          #tags: ${{ steps.get_version.outputs.BRANCH  }}-${{ github.sha }}
+          tags: latest
       
